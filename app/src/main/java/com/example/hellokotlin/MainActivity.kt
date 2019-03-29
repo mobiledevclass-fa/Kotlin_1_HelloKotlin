@@ -10,6 +10,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        textview.text = "Hello from Kotlin!"
+        main_textview.text = "Hello from Kotlin!"
+
+        main_button.setOnClickListener {
+            main_textview.text = "Button is pressed"
+        }
     }
 }
