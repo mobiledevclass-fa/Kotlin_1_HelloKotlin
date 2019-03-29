@@ -26,5 +26,9 @@ class MainActivity : AppCompatActivity() {
             mNameList.add(main_edittext.text.toString())
             adapter.notifyDataSetChanged()
         }
+
+        main_listview.setOnItemClickListener { parent, view, position, id ->
+            main_textview.text = mNameList.get(position).toString() + " is learning Android development!"
+        }
     }
 }
